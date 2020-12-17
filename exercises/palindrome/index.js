@@ -16,7 +16,12 @@ function palindrome(str) {
     // }
 
     // //modified solution-1
-    return str === str.split('').reverse().join('');
+    // return str === str.split('').reverse().join('');
+
+    //solution-2
+    return str.split('').every((char, i) => {
+        return char === str[str.length - i -1];
+    });
 }
 
 module.exports = palindrome;
