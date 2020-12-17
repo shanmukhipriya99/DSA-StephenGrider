@@ -14,6 +14,10 @@ function reverse(str) {
     //     reversed = character + reversed;
     // }
     // return reversed;
+    
+    //1st parameter of the reduce() arrow function takes the 2nd parameter of the reduce() initially and then takes the output of
+    //the arrow function. The 2nd parameter of the arrow function is the element of the array that is being processed.
+    return str.split('').reduce((rev, char) => char + rev, "");  //Solution-3
 }
 
 module.exports = reverse;
